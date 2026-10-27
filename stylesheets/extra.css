@@ -1,0 +1,292 @@
+.md-typeset__table {
+    min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+    display: table;
+}
+
+.md-grid {
+    max-width: 1440px;
+}
+
+:root {
+    --md-primary-fg-color: #011129;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="default"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+
+[data-md-color-scheme="slate"] {
+    --md-typeset-a-color: #3a7fff;
+    --md-accent-fg-color: #00bdeb;
+}
+.max-code-height>pre>code {
+    max-height: 500px; 
+    overflow-y: auto;
+}
+
+/* Responsive Cisco Live home page. Keep both logo artwork and copy inside the viewport. */
+.tx-container {
+    padding: clamp(1.5rem, 5vw, 4.5rem) 1rem;
+    color: var(--md-primary-bg-color);
+    background: var(--md-primary-fg-color);
+}
+
+.tx-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    color: inherit;
+}
+
+.tx-hero__image,
+.tx-hero__content {
+    min-width: 0;
+    width: 100%;
+}
+
+.tx-hero__image img {
+    display: block;
+    width: 100%;
+    max-width: 28rem;
+    max-height: 23rem;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.tx-hero__logo {
+    margin: 0 0 1.5rem;
+}
+
+.tx-hero__logo img {
+    display: block;
+    width: 100%;
+    max-width: 25rem;
+    max-height: 5rem;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.tx-hero__eyebrow {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    opacity: 0.88;
+}
+
+.tx-hero h1 {
+    margin: 0 0 1rem;
+    color: currentColor;
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+}
+
+.tx-hero__content > p {
+    max-width: 48rem;
+    color: inherit;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.pod-picker {
+    max-width: 42rem;
+    margin: 1.75rem 0 1rem;
+}
+
+.pod-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.pod-selector label {
+    flex: 0 0 100%;
+    margin: 0;
+}
+
+.pod-selector select {
+    box-sizing: border-box;
+    width: 300px;
+    min-width: 0;
+    height: 60px;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 0.25rem;
+    color: var(--md-default-fg-color);
+    background: var(--md-default-bg-color);
+    font: inherit;
+}
+
+.pod-selector button {
+    box-sizing: border-box;
+    width: 182px;
+    height: 60px;
+    padding: 0.55rem 1rem;
+    border: 0;
+    border-radius: 0.25rem;
+    color: #07111f;
+    background: var(--md-accent-fg-color);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pod-selector select:focus-visible,
+.pod-selector button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.pod-selector button:hover {
+    filter: brightness(1.08);
+}
+
+.pod-picker-hint {
+    margin: 0.65rem 0 1rem;
+    font-size: 0.92rem !important;
+    opacity: 0.9;
+}
+
+.topology-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0 1.25rem;
+    background: #fff;
+}
+
+/* Word-like controls for expanding and collapsing nested page headings. */
+.md-nav--secondary .toc-collapse-item {
+    position: relative;
+}
+
+.md-nav--secondary .toc-collapse-item > a.md-nav__link {
+    padding-left: 1.8rem;
+}
+
+.md-nav--secondary .toc-collapse-toggle {
+    position: absolute;
+    top: 0.15rem;
+    left: 0.05rem;
+    z-index: 1;
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 0.2rem;
+    color: var(--md-default-fg-color--light);
+    background: transparent;
+    cursor: pointer;
+}
+
+.md-nav--secondary .toc-collapse-toggle:hover {
+    color: var(--md-accent-fg-color);
+    background: var(--md-default-fg-color--lightest);
+}
+
+.md-nav--secondary .toc-collapse-toggle:focus-visible {
+    outline: 2px solid var(--md-accent-fg-color);
+    outline-offset: 1px;
+}
+
+.md-nav--secondary .toc-collapse-toggle::before {
+    width: 0;
+    height: 0;
+    border-top: 0.28rem solid transparent;
+    border-bottom: 0.28rem solid transparent;
+    border-left: 0.38rem solid currentColor;
+    content: "";
+    transition: transform 120ms ease;
+}
+
+.md-nav--secondary .toc-collapse-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.md-nav--secondary .toc-collapse-item > nav.md-nav[hidden] {
+    display: none;
+}
+
+.md-typeset .pod-selector {
+    margin: 1rem 0 1.5rem;
+}
+
+/* Give each screenshot caption clear separation from the next instruction. */
+.md-typeset p.figure-caption {
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.task-footer {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    margin: 2.25rem 0;
+}
+
+.task-footer .md-footer__inner {
+    min-height: 5rem;
+}
+
+@media screen and (max-width: 52rem) {
+    .tx-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .tx-hero__image img {
+        max-width: 16rem;
+        max-height: 11rem;
+        margin: 0;
+    }
+
+    .tx-hero__logo {
+        margin-bottom: 1rem;
+    }
+
+    .tx-hero__logo img {
+        max-width: 19rem;
+        max-height: 4rem;
+    }
+}
+
+@media screen and (max-width: 38rem) {
+    .pod-selector select,
+    .pod-selector button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 40rem) {
+    .md-typeset table:not([class]) {
+        display: table;
+        width: 100%;
+        min-width: 0;
+        table-layout: fixed;
+        white-space: normal;
+    }
+
+    .md-typeset table:not([class]) th,
+    .md-typeset table:not([class]) td {
+        padding: 0.45rem 0.4rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
